@@ -1,7 +1,33 @@
 {
-  "eventsAndFunctions": [],
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "OpenInContainer",
+            "expressionIcon": "\"logo.svg\"",
+            "expressionStartModel": "{}",
+            "expressionTitle": "\"Dashboard\"",
+            "uiComponentName": "UiDashboard",
+            "widgetNameContainer": "dyncontainer1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "main_init"
+    }
+  ],
   "model": [],
   "root": {
+    "children": [
+      {
+        "name": "dyncontainer1",
+        "title": "Welcome",
+        "widget": "DynContainer"
+      }
+    ],
     "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
     "horizontalSeparation": "large",
     "layout": "container",
@@ -10,5 +36,11 @@
   "routing": {
     "path": "/home"
   },
-  "unused": []
+  "unused": [
+    {
+      "__internalName": "htmlrenderer1",
+      "name": "htmlrenderer1",
+      "widget": "HtmlRenderer"
+    }
+  ]
 }

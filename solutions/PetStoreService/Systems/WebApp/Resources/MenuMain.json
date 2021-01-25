@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "children": [],
+    "icon": "logo.svg",
+    "text": "Home",
+    "uiComponentName": "CmpHome"
+  },
+  {
+    "children": [],
+    "icon": "logo.svg",
+    "text": "Clients",
+    "uiComponentName": "UiPetRescueLogger"
+  }
+]

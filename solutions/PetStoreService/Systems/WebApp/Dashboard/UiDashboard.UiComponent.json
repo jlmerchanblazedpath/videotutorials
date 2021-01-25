@@ -1,0 +1,44 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "PetStore.GetInventory()",
+            "variableName": "myInv"
+          },
+          {
+            "command": "SetValue",
+            "expression": "^myInv",
+            "widgetName": "htmlrenderer1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "myInv",
+            "type": "Inventory"
+          }
+        ]
+      },
+      "name": "main_init"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "htmlTemplate": "<div class=\"blz-padding-large blz-hover-default blz-border-bottom\">\n  <div style=\"display:flex\">\n    <div class=\"blz-text-medium blz-bold\" style=\"width:100%\">Inventory</div>\n  </div>\n  <div class=\"blz-area-variant blz-padding blz-border blz-border-radius blz-text-small\" style=\"display:flex\">\n      <div class=\"blz-margin-left\">[[Available]]:&nbsp;<span class=\"blz-bold\">{{format available 'Number'}}</span></div>\n      <div class=\"blz-margin-left\">[[Sold]]:&nbsp;<span class=\"blz-bold\">{{format sold 'Number'}}</span></div>\n      <div class=\"blz-margin-left\">[[Pending]]:&nbsp;<span class=\"blz-bold\">{{format pending 'Number'}}</span></div>\n  </div>\n</div>\n",
+        "name": "htmlrenderer1",
+        "typeName": "Inventory",
+        "widget": "HtmlRenderer"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}
