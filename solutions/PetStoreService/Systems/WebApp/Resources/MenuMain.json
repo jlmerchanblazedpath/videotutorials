@@ -8,7 +8,7 @@
   {
     "children": [],
     "icon": "logo.svg",
-    "text": "Clients",
+    "text": "[[PetLogger]]",
     "uiComponentName": "UiPetRescueLogger"
   }
 ]

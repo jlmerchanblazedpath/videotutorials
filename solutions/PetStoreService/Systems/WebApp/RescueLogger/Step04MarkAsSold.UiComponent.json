@@ -1,0 +1,18 @@
+{
+  "eventsAndFunctions": [],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "color": "default",
+        "name": "label1",
+        "text": "mark as sold",
+        "widget": "Label"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

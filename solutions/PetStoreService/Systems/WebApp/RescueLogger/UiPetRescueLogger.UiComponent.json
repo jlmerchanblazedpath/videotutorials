@@ -1,0 +1,34 @@
+{
+  "eventsAndFunctions": [],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "name": "stepper1",
+        "steps": [
+          {
+            "text": "[[AddPet]]",
+            "uiComponentName": "Step01PetForm"
+          },
+          {
+            "text": "[[AddPetPhoto]]",
+            "uiComponentName": "Step02AddPetPhoto"
+          },
+          {
+            "text": "[[CreatePetOrder]]",
+            "uiComponentName": "Step03AddOrder"
+          },
+          {
+            "text": "[[MarkPetAsSold]]",
+            "uiComponentName": "Step04MarkAsSold"
+          }
+        ],
+        "widget": "Stepper"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

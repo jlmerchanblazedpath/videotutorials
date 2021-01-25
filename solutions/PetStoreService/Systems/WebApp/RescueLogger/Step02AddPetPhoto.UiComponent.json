@@ -1,0 +1,18 @@
+{
+  "eventsAndFunctions": [],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "color": "default",
+        "name": "label1",
+        "text": "Photo is added here via url",
+        "widget": "Label"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}
