@@ -1,0 +1,44 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "username",
+        "type": "string"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "User",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "username",
+        "in": "Path",
+        "name": "username",
+        "remarks": "The name that needs to be fetched. Use user1 for testing. "
+      }
+    ],
+    "path": "/user/{username}",
+    "remarks": "Get user by user name",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "successful operation",
+        "typeName": "User"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Invalid username supplied"
+      },
+      {
+        "httpStatus": "404",
+        "remarks": "User not found"
+      }
+    ],
+    "tags": [
+      "user"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "token",
+        "type": "string"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "boolean",
+    "variables": []
+  },
+  "securityType": "BearerToken"
+}

@@ -1,0 +1,44 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "petId",
+        "type": "integer"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "petId",
+        "in": "Path",
+        "name": "petId",
+        "remarks": "ID of pet that needs to be updated"
+      }
+    ],
+    "path": "/pet/{petId}",
+    "remarks": "Updates a pet in the store with form data",
+    "responses": [
+      {
+        "httpStatus": "405",
+        "remarks": "Invalid input"
+      }
+    ],
+    "security": [
+      {
+        "condition": [
+          {
+            "securitySchemeName": "PetstoreAuth"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "pet"
+    ]
+  }
+}

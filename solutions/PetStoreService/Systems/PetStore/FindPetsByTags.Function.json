@@ -1,0 +1,48 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsFindPetsByTags"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "list(Pet)",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.tags",
+        "in": "Query",
+        "name": "tags",
+        "remarks": "Tags to filter by"
+      }
+    ],
+    "path": "/pet/findByTags",
+    "remarks": "Finds Pets by tags",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "successful operation"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Invalid tag value"
+      }
+    ],
+    "security": [
+      {
+        "condition": [
+          {
+            "securitySchemeName": "PetstoreAuth"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "pet"
+    ]
+  }
+}
