@@ -1,0 +1,49 @@
+{
+  "betweens": [],
+  "source": {
+    "elementType": "RdsTable",
+    "outputs": [
+      {
+        "codePath": "id",
+        "outputConnections": [
+          "c0"
+        ]
+      },
+      {
+        "codePath": "name",
+        "outputConnections": [
+          "c3"
+        ]
+      },
+      {
+        "codePath": "status",
+        "outputConnections": [
+          "c2"
+        ]
+      }
+    ],
+    "rdsTableName": "Mydb.Pets",
+    "x": 72,
+    "y": 67
+  },
+  "target": {
+    "elementType": "Type",
+    "inputs": [
+      {
+        "codePath": "id",
+        "inputConnection": "c0"
+      },
+      {
+        "codePath": "name",
+        "inputConnection": "c3"
+      },
+      {
+        "codePath": "status",
+        "inputConnection": "c2"
+      }
+    ],
+    "typeName": "PetMine",
+    "x": 600,
+    "y": 60
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "systems": [
+    {
+      "name": "Mircroserv",
+      "type": "Microservice",
+      "x": 519,
+      "y": 188
+    },
+    {
+      "name": "Mydb",
+      "type": "RelationalDatabase",
+      "x": 745,
+      "y": 187
+    },
+    {
+      "name": "PetStore",
+      "type": "RestApi",
+      "x": 520,
+      "y": 358
+    },
+    {
+      "name": "WebApp",
+      "type": "WebFrontend",
+      "x": 282,
+      "y": 188
+    }
+  ],
+  "references": [
+    {
+      "fromSystemName": "Mircroserv",
+      "toSystemName": "Mydb"
+    },
+    {
+      "fromSystemName": "Mircroserv",
+      "toSystemName": "PetStore"
+    },
+    {
+      "fromSystemName": "WebApp",
+      "toSystemName": "Mircroserv"
+    },
+    {
+      "fromSystemName": "WebApp",
+      "toSystemName": "PetStore"
+    }
+  ]
+}

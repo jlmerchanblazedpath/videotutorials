@@ -1,0 +1,23 @@
+{
+  "autoincrementalPrimaryKey": true,
+  "columns": [
+    {
+      "alias": "id",
+      "name": "ID",
+      "primaryKey": true,
+      "type": "integer"
+    },
+    {
+      "alias": "code",
+      "name": "CODE",
+      "type": "string"
+    }
+  ],
+  "foreignKeys": [],
+  "indexes": [],
+  "isView": false,
+  "primaryKeyName": "",
+  "sequenceName": "SQ_GENDER",
+  "tableName": "GENDERS",
+  "uniqueKeys": []
+}

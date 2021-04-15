@@ -1,13 +1,95 @@
 {
-  "eventsAndFunctions": [],
-  "model": [],
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "{}",
+            "variableName": "myPet"
+          },
+          {
+            "command": "GetValue",
+            "variableName": "myPet.name",
+            "widgetName": "txtName"
+          },
+          {
+            "command": "GetValue",
+            "variableName": "myPet.status",
+            "widgetName": "txtStatus"
+          },
+          {
+            "command": "ConsoleLog",
+            "expression": "^myPet"
+          },
+          {
+            "command": "Set",
+            "expression": "PetStore.AddPet(^myPet)",
+            "variableName": "myPet"
+          },
+          {
+            "command": "AlertMessage",
+            "expressionMessage": "\"The pet has been added with id: \" + ConvertToString(^myPet.id)",
+            "expressionTitle": "\"[[PetHasBeenAdded]]\"",
+            "severity": "information"
+          },
+          {
+            "command": "WriteLocalStorage",
+            "expression": "^myPet",
+            "localStorageVariableName": "\"instance\""
+          },
+          {
+            "command": "SendDataToParent",
+            "expressionData": "{ newpet: ^myPet }"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "myPet",
+            "type": "PetStore.Pet"
+          }
+        ]
+      },
+      "name": "button1_click"
+    }
+  ],
+  "model": [
+    {
+      "name": "instance",
+      "required": false,
+      "type": "PetStore.Pet"
+    }
+  ],
   "root": {
     "children": [
       {
-        "color": "default",
-        "name": "label1",
-        "text": "PET FORM GOES HERE",
-        "widget": "Label"
+        "children": [
+          {
+            "binding": "instance.name",
+            "label": "[[Name]]",
+            "name": "txtName",
+            "widget": "TextBox"
+          },
+          {
+            "binding": "instance.status",
+            "label": "[[Status]]",
+            "name": "txtStatus",
+            "widget": "TextBox"
+          },
+          {
+            "align": "right",
+            "color": "primary",
+            "icon": "add.svg",
+            "name": "button1",
+            "text": "[[Add]]",
+            "widget": "Button"
+          }
+        ],
+        "icon": "add.svg",
+        "layout": "container",
+        "title": "[[NewPet]]"
       }
     ],
     "cssClass": "blz-area-default",

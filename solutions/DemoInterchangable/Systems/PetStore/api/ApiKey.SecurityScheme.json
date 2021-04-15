@@ -1,0 +1,16 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "key",
+        "type": "string"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "boolean",
+    "variables": []
+  },
+  "apiKeyIn": "Header",
+  "apiKeyName": "api_key",
+  "securityType": "ApiKey"
+}

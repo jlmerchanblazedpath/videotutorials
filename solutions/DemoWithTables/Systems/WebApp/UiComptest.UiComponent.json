@@ -1,0 +1,75 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Refresh",
+            "widgetName": "htmlrepeater1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "htmlrepeater1_init"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "args",
+            "type": "ArgsLoadRecords"
+          }
+        ],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "{}",
+            "variableName": "args1"
+          },
+          {
+            "command": "Set",
+            "expression": "^args.offset",
+            "variableName": "args1.offset"
+          },
+          {
+            "command": "Set",
+            "expression": "^args.limit",
+            "variableName": "args1.limit"
+          },
+          {
+            "command": "Return",
+            "expression": "MyMicroservice.ListGenders(^args1)"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "args1",
+            "type": "MyMicroservice.ArgsListGenders"
+          }
+        ]
+      },
+      "name": "htmlrepeater1_loadRecords"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "htmlTemplate": "<div class=\"blz-padding-large blz-hover-default blz-border-bottom\">\n  <div style=\"display:flex\">\n    <div class=\"blz-text-medium blz-bold\" style=\"width:100%\">{{format id 'Number'}}</div>\n  </div>\n  <div class=\"blz-area-variant blz-padding blz-border blz-border-radius blz-text-small\" style=\"display:flex\">\n      <div>[[Code]]:&nbsp;<span class=\"blz-bold\">{{code}}</span></div>\n  </div>\n</div>\n",
+        "name": "htmlrepeater1",
+        "pageSize": 20,
+        "typeName": "MyMicroservice.Gender",
+        "widget": "HtmlRepeater",
+        "withFiltering": false,
+        "withPaging": true
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

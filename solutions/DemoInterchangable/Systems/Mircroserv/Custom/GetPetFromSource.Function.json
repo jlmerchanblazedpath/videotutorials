@@ -1,0 +1,42 @@
+{
+  "algorithm": {
+    "parameters": [],
+    "statements": [
+      {
+        "command": "ReadConfigParameter",
+        "configParameterName": "DataSource",
+        "variableName": "source"
+      },
+      {
+        "children": [
+          {
+            "command": "Return",
+            "expression": "GetPetFromRest()"
+          }
+        ],
+        "command": "If",
+        "expression": "^source == \"rest\""
+      },
+      {
+        "children": [
+          {
+            "command": "Return",
+            "expression": "GetPetFromDb()"
+          }
+        ],
+        "command": "Else"
+      }
+    ],
+    "typeReturn": "list(PetMine)",
+    "variables": [
+      {
+        "name": "source",
+        "type": "string"
+      }
+    ]
+  },
+  "routing": {
+    "method": "GET",
+    "path": "/getpetfromsource"
+  }
+}

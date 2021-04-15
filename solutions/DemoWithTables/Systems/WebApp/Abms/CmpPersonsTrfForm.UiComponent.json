@@ -1,0 +1,88 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "MyMicroservice.ListGenders({})",
+            "variableName": "listGenders"
+          },
+          {
+            "command": "Load",
+            "expression": "Map(listGenders, [id, code])",
+            "widgetName": "cboGenderId"
+          },
+          {
+            "command": "ReadLocalStorage",
+            "localStorageVariableName": "instance",
+            "variableName": "myPerson"
+          },
+          {
+            "children": [
+              {
+                "command": "SetValue",
+                "expression": "^myPerson.genderId",
+                "widgetName": "cboGenderId"
+              },
+              {
+                "command": "SetValue",
+                "expression": "^myPerson.name",
+                "widgetName": "txtName"
+              }
+            ],
+            "command": "If",
+            "expression": "IsNotNull(^myPerson)"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "myPerson",
+            "type": "MyMicroservice.Person"
+          },
+          {
+            "name": "listGenders",
+            "type": "list(MyMicroservice.Gender)"
+          }
+        ]
+      },
+      "name": "main_init"
+    }
+  ],
+  "model": [
+    {
+      "name": "instance",
+      "required": false,
+      "type": "MyMicroservice.Person"
+    }
+  ],
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "binding": "instance.name",
+            "label": "[[Name]]",
+            "name": "txtName",
+            "widget": "TextBox"
+          },
+          {
+            "binding": "instance.genderId",
+            "dataFormat": "key-value",
+            "label": "[[GenderId]]",
+            "mode": "single",
+            "name": "cboGenderId",
+            "widget": "ComboBox"
+          }
+        ],
+        "layout": "container"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

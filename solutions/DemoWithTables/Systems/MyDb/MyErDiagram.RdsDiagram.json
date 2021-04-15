@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "rdsTableName": "Gender",
+      "x": 651,
+      "y": 81
+    },
+    {
+      "rdsTableName": "Person",
+      "x": 229,
+      "y": 73
+    }
+  ]
+}

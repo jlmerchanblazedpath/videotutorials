@@ -1,0 +1,49 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "body",
+        "type": "User"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "PUT",
+    "parameters": [
+      {
+        "bind": "username",
+        "in": "Path",
+        "name": "username",
+        "remarks": "name that need to be updated"
+      },
+      {
+        "bind": "body",
+        "in": "Body",
+        "name": "body",
+        "remarks": "Updated user object"
+      }
+    ],
+    "path": "/user/{username}",
+    "remarks": "Updated user",
+    "responses": [
+      {
+        "httpStatus": "400",
+        "remarks": "Invalid user supplied"
+      },
+      {
+        "httpStatus": "404",
+        "remarks": "User not found"
+      }
+    ],
+    "tags": [
+      "user"
+    ]
+  }
+}

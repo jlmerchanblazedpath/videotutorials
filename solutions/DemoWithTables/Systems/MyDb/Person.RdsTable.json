@@ -1,0 +1,40 @@
+{
+  "autoincrementalPrimaryKey": true,
+  "columns": [
+    {
+      "alias": "id",
+      "name": "ID",
+      "primaryKey": true,
+      "type": "integer"
+    },
+    {
+      "alias": "name",
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "alias": "genderId",
+      "name": "GENDER_ID",
+      "type": "integer"
+    }
+  ],
+  "foreignKeys": [
+    {
+      "alias": "genderFk",
+      "details": [
+        {
+          "columnName": "GENDER_ID",
+          "relatedColumnName": "ID"
+        }
+      ],
+      "name": "GENDER_FK",
+      "rdsTableName": "Gender"
+    }
+  ],
+  "indexes": [],
+  "isView": false,
+  "primaryKeyName": "ID",
+  "sequenceName": "SQ_PERSON",
+  "tableName": "TBL_PERSON",
+  "uniqueKeys": []
+}

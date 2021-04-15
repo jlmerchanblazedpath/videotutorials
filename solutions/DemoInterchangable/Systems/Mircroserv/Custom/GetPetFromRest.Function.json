@@ -1,0 +1,17 @@
+{
+  "algorithm": {
+    "parameters": [],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "Transform(TrfPetFromRest, PetStore.FindPetsByStatus({status: \"available\"}))"
+      }
+    ],
+    "typeReturn": "list(Mircroserv.PetMine)",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "path": "/getpetfromrest"
+  }
+}

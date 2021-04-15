@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "systemName": "MyDb",
+      "action": "mock",
+      "mockInitialization": {
+        "records": [
+          {
+            "rdsTableName": "Gender",
+            "id": "Male",
+            "code": "Male"
+          },
+          {
+            "rdsTableName": "Gender",
+            "id": "Female",
+            "code": "Female"
+          },
+          {
+            "rdsTableName": "Person",
+            "id": "Joe",
+            "name": "Joe",
+            "genderId": "Male"
+          },
+          {
+            "rdsTableName": "Person",
+            "id": "Mary",
+            "name": "Mary",
+            "genderId": "Female"
+          }
+        ]
+      }
+    }
+  ]
+}

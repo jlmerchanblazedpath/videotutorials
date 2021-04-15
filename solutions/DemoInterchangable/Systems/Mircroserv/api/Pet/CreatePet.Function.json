@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "pet",
+        "type": "Pet"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsInsert(Mydb.Pets, ^pet)"
+      }
+    ],
+    "typeReturn": "integer",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "pet",
+        "in": "Body",
+        "name": "body",
+        "remarks": "Pet to be created."
+      }
+    ],
+    "path": "/pet",
+    "remarks": "Allows to create a new Pet.",
+    "responses": []
+  }
+}

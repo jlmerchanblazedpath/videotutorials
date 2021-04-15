@@ -1,0 +1,28 @@
+{
+  "autoincrementalPrimaryKey": true,
+  "columns": [
+    {
+      "alias": "id",
+      "name": "ID",
+      "primaryKey": true,
+      "type": "integer"
+    },
+    {
+      "alias": "name",
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "alias": "status",
+      "name": "STATUS",
+      "type": "string"
+    }
+  ],
+  "foreignKeys": [],
+  "indexes": [],
+  "isView": false,
+  "primaryKeyName": "id",
+  "sequenceName": "",
+  "tableName": "PETS",
+  "uniqueKeys": []
+}

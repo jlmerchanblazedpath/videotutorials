@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "systemName": "Mircroserv",
+      "action": "build",
+      "parameters": [
+        {
+          "configParameterName": "DataSource",
+          "value": "reste"
+        }
+      ]
+    },
+    {
+      "systemName": "PetStore",
+      "action": "connect",
+      "connectionData": {
+        "url": "https://petstore.swagger.io/v2"
+      }
+    },
+    {
+      "systemName": "Mydb",
+      "action": "mock",
+      "mockInitialization": {
+        "records": [
+          {
+            "rdsTableName": "Pets",
+            "id": "Tito",
+            "name": "Tito",
+            "status": "available"
+          }
+        ]
+      }
+    }
+  ]
+}

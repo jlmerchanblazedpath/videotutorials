@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "gender",
+        "type": "Gender"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsInsert(MyDb.Gender, ^gender)"
+      }
+    ],
+    "typeReturn": "integer",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "gender",
+        "in": "Body",
+        "name": "body",
+        "remarks": "Gender to be created."
+      }
+    ],
+    "path": "/gender",
+    "remarks": "Allows to create a new Gender.",
+    "responses": []
+  }
+}

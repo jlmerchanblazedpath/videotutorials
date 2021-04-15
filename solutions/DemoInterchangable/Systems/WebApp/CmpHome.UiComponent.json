@@ -1,0 +1,76 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Refresh",
+            "widgetName": "grid1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "main_init"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "args",
+            "type": "ArgsLoadRecords"
+          }
+        ],
+        "statements": [
+          {
+            "command": "Return",
+            "expression": "Mircroserv.GetPetFromSource()"
+          }
+        ],
+        "typeReturn": "list(any)",
+        "variables": []
+      },
+      "name": "grid1_loadRecords"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "columns": [
+          {
+            "align": "left",
+            "bindText": "id",
+            "format": "Number",
+            "header": "Id",
+            "size": 1
+          },
+          {
+            "align": "left",
+            "bindText": "name",
+            "header": "Name",
+            "size": 1
+          },
+          {
+            "align": "left",
+            "bindText": "status",
+            "header": "Status",
+            "size": 1
+          }
+        ],
+        "name": "grid1",
+        "typeName": "Mircroserv.PetMine",
+        "widget": "Grid"
+      }
+    ],
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
+    "horizontalSeparation": "large",
+    "layout": "container",
+    "verticalSeparation": "large"
+  },
+  "routing": {
+    "path": "/home"
+  },
+  "unused": []
+}

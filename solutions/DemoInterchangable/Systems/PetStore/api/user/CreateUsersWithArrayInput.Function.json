@@ -1,0 +1,35 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "body",
+        "type": "list(User)"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "body",
+        "in": "Body",
+        "name": "body",
+        "remarks": "List of user object"
+      }
+    ],
+    "path": "/user/createWithArray",
+    "remarks": "Creates list of users with given input array",
+    "responses": [
+      {
+        "httpStatus": "default",
+        "remarks": "successful operation"
+      }
+    ],
+    "tags": [
+      "user"
+    ]
+  }
+}

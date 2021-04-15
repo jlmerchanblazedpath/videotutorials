@@ -1,0 +1,35 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "body",
+        "type": "User"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "body",
+        "in": "Body",
+        "name": "body",
+        "remarks": "Created user object"
+      }
+    ],
+    "path": "/user",
+    "remarks": "Create user",
+    "responses": [
+      {
+        "httpStatus": "default",
+        "remarks": "successful operation"
+      }
+    ],
+    "tags": [
+      "user"
+    ]
+  }
+}
