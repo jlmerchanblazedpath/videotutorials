@@ -11,7 +11,7 @@
         "children": [
           {
             "command": "Return",
-            "expression": "GetPetFromRest()"
+            "expression": "Transform(TrfPetFromRest, PetStore.FindPetsByStatus({status: \"available\"}))"
           }
         ],
         "command": "If",
@@ -21,7 +21,7 @@
         "children": [
           {
             "command": "Return",
-            "expression": "GetPetFromDb()"
+            "expression": "Transform(TrfPetFromDb, RdsSelectReader(Mydb.Pets))"
           }
         ],
         "command": "Else"

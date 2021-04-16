@@ -1,28 +1,82 @@
 {
-  "autoincrementalPrimaryKey": true,
+  "autoincrementalPrimaryKey": false,
   "columns": [
     {
-      "alias": "id",
-      "name": "ID",
-      "primaryKey": true,
+      "alias": "name",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "NAME",
+      "primaryKey": false,
+      "type": "string"
+    },
+    {
+      "alias": "petId",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "INT",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "PET_ID",
+      "primaryKey": false,
       "type": "integer"
     },
     {
-      "alias": "name",
-      "name": "NAME",
-      "type": "string"
+      "alias": "specieId",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "INT",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "SPECIE_ID",
+      "primaryKey": false,
+      "type": "integer"
     },
     {
       "alias": "status",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
       "name": "STATUS",
+      "primaryKey": false,
       "type": "string"
     }
   ],
-  "foreignKeys": [],
-  "indexes": [],
-  "isView": false,
-  "primaryKeyName": "id",
+  "foreignKeys": [
+    {
+      "alias": "specie",
+      "details": [
+        {
+          "columnName": "SPECIE_ID",
+          "relatedColumnName": "SPECIE_ID"
+        }
+      ],
+      "name": "SPECIES_FK",
+      "rdsTableName": "Species"
+    }
+  ],
+  "indexes": [
+    {
+      "columnsNames": [
+        "SPECIE_ID"
+      ],
+      "name": "SPECIES_FK"
+    }
+  ],
+  "primaryKeyName": "",
   "sequenceName": "",
-  "tableName": "PETS",
+  "tableName": "pets",
   "uniqueKeys": []
 }

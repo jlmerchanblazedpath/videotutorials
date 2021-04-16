@@ -6,7 +6,7 @@
       "parameters": [
         {
           "configParameterName": "DataSource",
-          "value": "reste"
+          "value": "rest"
         }
       ]
     },

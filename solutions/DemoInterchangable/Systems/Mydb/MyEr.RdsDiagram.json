@@ -4,6 +4,11 @@
       "rdsTableName": "Pets",
       "x": 216,
       "y": 114
+    },
+    {
+      "rdsTableName": "Species",
+      "x": 611,
+      "y": 134
     }
   ]
 }

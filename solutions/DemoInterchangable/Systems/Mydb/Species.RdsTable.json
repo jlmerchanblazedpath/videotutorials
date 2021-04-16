@@ -1,0 +1,37 @@
+{
+  "autoincrementalPrimaryKey": false,
+  "columns": [
+    {
+      "alias": "specieId",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "INT",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "SPECIE_ID",
+      "primaryKey": true,
+      "type": "integer"
+    },
+    {
+      "alias": "name",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "NAME",
+      "primaryKey": false,
+      "type": "string"
+    }
+  ],
+  "foreignKeys": [],
+  "indexes": [],
+  "primaryKeyName": "PRIMARY",
+  "sequenceName": "",
+  "tableName": "species",
+  "uniqueKeys": []
+}
