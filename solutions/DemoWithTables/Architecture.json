@@ -3,20 +3,20 @@
     {
       "name": "MyDb",
       "type": "RelationalDatabase",
-      "x": 321,
-      "y": 226
+      "x": 553,
+      "y": 58
     },
     {
       "name": "MyMicroservice",
       "type": "Microservice",
-      "x": 320,
-      "y": 61
+      "x": 321,
+      "y": 59
     },
     {
       "name": "WebApp",
       "type": "WebFrontend",
-      "x": 103,
-      "y": 61
+      "x": 121,
+      "y": 62
     }
   ],
   "references": [
