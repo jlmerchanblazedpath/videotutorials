@@ -1,0 +1,22 @@
+{
+  "systems": [
+    {
+      "name": "PetStore",
+      "type": "RestApi",
+      "x": 575,
+      "y": 211
+    },
+    {
+      "name": "WebApp",
+      "type": "WebFrontend",
+      "x": 403,
+      "y": 211
+    }
+  ],
+  "references": [
+    {
+      "fromSystemName": "WebApp",
+      "toSystemName": "PetStore"
+    }
+  ]
+}

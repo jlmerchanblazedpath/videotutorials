@@ -1,0 +1,44 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "body",
+        "type": "Pet"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "body",
+        "in": "Body",
+        "name": "body",
+        "remarks": "Pet object that needs to be added to the store"
+      }
+    ],
+    "path": "/pet",
+    "remarks": "Add a new pet to the store",
+    "responses": [
+      {
+        "httpStatus": "405",
+        "remarks": "Invalid input"
+      }
+    ],
+    "security": [
+      {
+        "condition": [
+          {
+            "securitySchemeName": "PetstoreAuth"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "pet"
+    ]
+  }
+}

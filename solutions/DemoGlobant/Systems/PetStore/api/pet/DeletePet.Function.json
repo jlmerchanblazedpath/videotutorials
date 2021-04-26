@@ -1,0 +1,57 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "petId",
+        "type": "integer"
+      },
+      {
+        "name": "args",
+        "type": "ArgsDeletePet"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "DELETE",
+    "parameters": [
+      {
+        "bind": "args.apikey",
+        "in": "Header",
+        "name": "api_key"
+      },
+      {
+        "bind": "petId",
+        "in": "Path",
+        "name": "petId",
+        "remarks": "Pet id to delete"
+      }
+    ],
+    "path": "/pet/{petId}",
+    "remarks": "Deletes a pet",
+    "responses": [
+      {
+        "httpStatus": "400",
+        "remarks": "Invalid ID supplied"
+      },
+      {
+        "httpStatus": "404",
+        "remarks": "Pet not found"
+      }
+    ],
+    "security": [
+      {
+        "condition": [
+          {
+            "securitySchemeName": "PetstoreAuth"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "pet"
+    ]
+  }
+}

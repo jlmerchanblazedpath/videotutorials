@@ -1,0 +1,45 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "petId",
+        "type": "integer"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ApiResponse",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "petId",
+        "in": "Path",
+        "name": "petId",
+        "remarks": "ID of pet to update"
+      }
+    ],
+    "path": "/pet/{petId}/uploadImage",
+    "remarks": "uploads an image",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "successful operation",
+        "typeName": "ApiResponse"
+      }
+    ],
+    "security": [
+      {
+        "condition": [
+          {
+            "securitySchemeName": "PetstoreAuth"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "pet"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsLoginUser"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "string",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.username",
+        "in": "Query",
+        "name": "username",
+        "remarks": "The user name for login"
+      },
+      {
+        "bind": "args.password",
+        "in": "Query",
+        "name": "password",
+        "remarks": "The password for login in clear text"
+      }
+    ],
+    "path": "/user/login",
+    "remarks": "Logs user into the system",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "successful operation"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Invalid username/password supplied"
+      }
+    ],
+    "tags": [
+      "user"
+    ]
+  }
+}
