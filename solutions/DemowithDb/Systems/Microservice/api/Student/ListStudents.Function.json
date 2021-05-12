@@ -1,0 +1,50 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsListStudents"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsSelect(MyDb.TblStudents, This(), [RdsConditional(studentId == ^args.studentId, !IsNull(^args.studentId)), RdsConditional(code == ^args.code, !IsNull(^args.code))], code, ^args.offset, ^args.limit)"
+      }
+    ],
+    "typeReturn": "list(Student)",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.studentId",
+        "in": "Query",
+        "name": "studentId",
+        "remarks": "For filtering."
+      },
+      {
+        "bind": "args.code",
+        "in": "Query",
+        "name": "code",
+        "remarks": "For filtering."
+      },
+      {
+        "bind": "args.offset",
+        "in": "Query",
+        "name": "offset",
+        "remarks": "Requested index for start the results to be provided in response."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Requested number results to be provided in response."
+      }
+    ],
+    "path": "/students",
+    "remarks": "Allows to get a list of Students.",
+    "responses": []
+  }
+}

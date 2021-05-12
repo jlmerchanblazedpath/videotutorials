@@ -24,27 +24,12 @@
         ],
         "statements": [
           {
-            "command": "Set",
-            "expression": "{}",
-            "variableName": "args1"
-          },
-          {
-            "command": "Set",
-            "expression": "[\"available\"]",
-            "variableName": "args1.status"
-          },
-          {
             "command": "Return",
-            "expression": "PetStore.FindPetsByStatus(^args1)"
+            "expression": "Microservice.GetMiscelanea()"
           }
         ],
         "typeReturn": "any",
-        "variables": [
-          {
-            "name": "args1",
-            "type": "PetStore.ArgsFindPetsByStatus"
-          }
-        ]
+        "variables": []
       },
       "name": "grid1_loadRecords"
     }
@@ -53,31 +38,26 @@
   "root": {
     "children": [
       {
+        "color": "default",
+        "name": "label1",
+        "text": "Hello Mongo",
+        "widget": "Label"
+      },
+      {
         "columns": [
           {
             "align": "left",
-            "bindText": "id",
-            "format": "Number",
-            "header": "Id",
-            "size": 1
-          },
-          {
-            "align": "left",
-            "bindText": "name",
-            "header": "Name",
-            "size": 1
-          },
-          {
-            "align": "left",
-            "bindText": "status",
-            "header": "Status",
+            "bindText": "code",
+            "header": "Code",
             "size": 1
           }
         ],
         "name": "grid1",
-        "title": "Demo globant",
-        "typeName": "PetStore.Pet",
-        "widget": "Grid"
+        "pageSize": null,
+        "typeName": "Microservice.MiscelaneaDoc",
+        "widget": "Grid",
+        "withFiltering": false,
+        "withPaging": false
       }
     ],
     "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",

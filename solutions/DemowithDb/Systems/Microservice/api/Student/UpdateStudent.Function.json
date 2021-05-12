@@ -1,0 +1,42 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "studentId",
+        "type": "integer"
+      },
+      {
+        "name": "student",
+        "type": "Student"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsUpdate(MyDb.TblStudents, ^student, studentId == ^studentId)"
+      }
+    ],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "PATCH",
+    "parameters": [
+      {
+        "bind": "studentId",
+        "in": "Path",
+        "name": "studentId",
+        "remarks": "Id."
+      },
+      {
+        "bind": "student",
+        "in": "Body",
+        "name": "body",
+        "remarks": "New Student information to be updated."
+      }
+    ],
+    "path": "/student/{studentId}",
+    "remarks": "Allows to update an existing Student.",
+    "responses": []
+  }
+}

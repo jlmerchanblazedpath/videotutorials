@@ -1,0 +1,22 @@
+{
+  "algorithm": {
+    "parameters": [],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "MongodbFind(MyMongo,\"Miscelanea\", true)"
+      }
+    ],
+    "typeReturn": "list(MiscelaneaDoc)",
+    "variables": [
+      {
+        "name": "myListDocs",
+        "type": "list(MiscelaneaDoc)"
+      }
+    ]
+  },
+  "routing": {
+    "method": "GET",
+    "path": "/getmiscelanea"
+  }
+}

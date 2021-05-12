@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "student",
+        "type": "Student"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsInsert(MyDb.TblStudents, ^student)"
+      }
+    ],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "student",
+        "in": "Body",
+        "name": "body",
+        "remarks": "Student to be created."
+      }
+    ],
+    "path": "/student",
+    "remarks": "Allows to create a new Student.",
+    "responses": []
+  }
+}

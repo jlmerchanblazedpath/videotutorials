@@ -1,0 +1,101 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Refresh",
+            "widgetName": "grid1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "grid1_init"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "args",
+            "type": "ArgsLoadRecords"
+          }
+        ],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "{}",
+            "variableName": "args1"
+          },
+          {
+            "command": "Set",
+            "expression": "[\"available\"]",
+            "variableName": "args1.status"
+          },
+          {
+            "command": "Return",
+            "expression": "PetStore.FindPetsByStatus(^args1)"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "args1",
+            "type": "PetStore.ArgsFindPetsByStatus"
+          }
+        ]
+      },
+      "name": "grid1_loadRecords"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "bold": true,
+        "color": "default",
+        "name": "label1",
+        "text": "Demo Pet Store",
+        "widget": "Label"
+      },
+      {
+        "columns": [
+          {
+            "align": "left",
+            "bindText": "id",
+            "format": "Number",
+            "header": "Id",
+            "size": 1
+          },
+          {
+            "align": "left",
+            "bindText": "name",
+            "header": "Name",
+            "size": 1
+          },
+          {
+            "align": "left",
+            "bindText": "status",
+            "header": "Status",
+            "size": 1
+          }
+        ],
+        "name": "grid1",
+        "pageSize": null,
+        "typeName": "PetStore.Pet",
+        "widget": "Grid",
+        "withFiltering": false,
+        "withPaging": false
+      }
+    ],
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
+    "horizontalSeparation": "large",
+    "layout": "container",
+    "verticalSeparation": "large"
+  },
+  "routing": {
+    "path": "/home"
+  },
+  "unused": []
+}

@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "studentId",
+        "type": "integer"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsDelete(MyDb.TblStudents, studentId == ^studentId)"
+      }
+    ],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "DELETE",
+    "parameters": [
+      {
+        "bind": "studentId",
+        "in": "Path",
+        "name": "studentId",
+        "remarks": "Id."
+      }
+    ],
+    "path": "/student/{studentId}",
+    "remarks": "Allows to delete a Student.",
+    "responses": []
+  }
+}

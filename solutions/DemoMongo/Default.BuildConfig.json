@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "systemName": "MyMongo",
+      "action": "connect",
+      "connectionData": {
+        "url": "mongodb+srv://root:pssword@cluster0.aujd8.mongodb.net/",
+        "databaseName": "myFirstDatabase"
+      }
+    }
+  ]
+}

@@ -3,14 +3,14 @@
     {
       "name": "PetStore",
       "type": "RestApi",
-      "x": 575,
-      "y": 211
+      "x": 430,
+      "y": 62
     },
     {
       "name": "WebApp",
       "type": "WebFrontend",
-      "x": 403,
-      "y": 211
+      "x": 205,
+      "y": 61
     }
   ],
   "references": [
