@@ -1,3 +1,0 @@
-{
-  "type": "obj(complete:boolean,id:integer,petId:integer,quantity:integer,shipDate:datetime,status:string)"
-}

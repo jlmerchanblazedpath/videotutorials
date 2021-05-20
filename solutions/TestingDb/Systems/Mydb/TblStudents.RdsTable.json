@@ -1,0 +1,110 @@
+{
+  "autoincrementalPrimaryKey": true,
+  "columns": [
+    {
+      "alias": "studentId",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "INT",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "STUDENT_ID",
+      "primaryKey": true,
+      "type": "integer"
+    },
+    {
+      "alias": "average",
+      "allowNull": true,
+      "dbTypes": [
+        {
+          "dbType": "DECIMAL(19,4)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "AVERAGE",
+      "primaryKey": false,
+      "type": "decimal"
+    },
+    {
+      "alias": "birthDate",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "DATE",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "BIRTH_DATE",
+      "primaryKey": false,
+      "type": "date"
+    },
+    {
+      "alias": "code",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "CODE",
+      "primaryKey": false,
+      "type": "string"
+    },
+    {
+      "alias": "gender",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "GENDER",
+      "primaryKey": false,
+      "type": "string"
+    },
+    {
+      "alias": "name",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "NAME",
+      "primaryKey": false,
+      "type": "string"
+    },
+    {
+      "alias": "surname",
+      "allowNull": false,
+      "dbTypes": [
+        {
+          "dbType": "VARCHAR(80)",
+          "providerName": "MySql"
+        }
+      ],
+      "name": "SURNAME",
+      "primaryKey": false,
+      "type": "string"
+    }
+  ],
+  "foreignKeys": [],
+  "indexes": [],
+  "isView": false,
+  "primaryKeyName": "TBL_STUDENTS_PK",
+  "sequenceName": "",
+  "tableName": "tbl_students",
+  "uniqueKeys": [
+    {
+      "columnsNames": [
+        "STUDENT_ID"
+      ],
+      "name": "UK_STUDENT_ID"
+    }
+  ]
+}

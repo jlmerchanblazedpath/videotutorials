@@ -1,3 +1,0 @@
-{
-  "type": "obj(category:Category,id:integer,name:string,photoUrls:list(string),status:string,tags:list(Tag))"
-}

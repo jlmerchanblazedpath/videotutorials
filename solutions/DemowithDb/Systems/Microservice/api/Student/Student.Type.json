@@ -1,3 +1,0 @@
-{
-  "type": "obj(studentId: integer, average: decimal, birthDate: date, code: string, gender: string, name: string, surname: string)"
-}

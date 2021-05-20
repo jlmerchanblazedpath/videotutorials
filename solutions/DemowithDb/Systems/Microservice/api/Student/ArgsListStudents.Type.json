@@ -1,3 +1,0 @@
-{
-  "type": "obj(studentId: integer, code: string, offset: integer, limit: integer)"
-}

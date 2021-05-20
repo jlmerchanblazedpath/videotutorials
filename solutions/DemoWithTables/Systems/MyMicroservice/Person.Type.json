@@ -1,3 +1,0 @@
-{
-  "type": "obj(id: integer, name: string, genderId: integer, genderFk: Gender)"
-}

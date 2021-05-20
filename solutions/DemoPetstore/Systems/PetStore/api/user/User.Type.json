@@ -1,3 +1,0 @@
-{
-  "type": "obj(email:string,firstName:string,id:integer,lastName:string,password:string,phone:string,userStatus:integer,username:string)"
-}
