@@ -2,6 +2,12 @@
   "eventsAndFunctions": [],
   "model": [],
   "root": {
+    "children": [
+      {
+        "name": "autocomplete1",
+        "widget": "Autocomplete"
+      }
+    ],
     "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
     "horizontalSeparation": "large",
     "layout": "container",

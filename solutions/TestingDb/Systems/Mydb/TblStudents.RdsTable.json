@@ -84,17 +84,30 @@
       "allowNull": false,
       "dbTypes": [
         {
-          "dbType": "VARCHAR(80)",
+          "dbType": "VARCHAR(100)",
           "providerName": "MySql"
         }
       ],
-      "name": "SURNAME",
+      "name": "Surname",
       "primaryKey": false,
       "type": "string"
     }
   ],
   "foreignKeys": [],
-  "indexes": [],
+  "indexes": [
+    {
+      "columnsNames": [
+        "STUDENT_ID"
+      ],
+      "name": "IX_STUDENT_ID"
+    },
+    {
+      "columnsNames": [
+        "STUDENT_ID"
+      ],
+      "name": "UK_STUDENT_ID"
+    }
+  ],
   "isView": false,
   "primaryKeyName": "TBL_STUDENTS_PK",
   "sequenceName": "",
